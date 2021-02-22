@@ -1,0 +1,37 @@
+.row{
+    margin-left: 20px;
+    color: black;
+    text-align: start;
+}
+
+.movie_list{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.movie_list::-webkit-scrollbar{
+    display: none;
+}
+
+
+.movie_list .movie{
+    object-fit: contain;
+    width: 100%;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 0.45s;
+}
+
+.movie_list .movie:hover{
+    transform: scale(1.08);
+}
+
+.movie_list .poster{
+    max-height: 200px;
+}
+
+.movie_list .poster:hover{
+    transform: scale(1.12)
+}
