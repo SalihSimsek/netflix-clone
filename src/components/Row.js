@@ -15,6 +15,7 @@ const Row = ({ title, url, isLargeRow }) => {
   useEffect(() => {
     const fetchMovies = async () => {
       const request = await axios.get(url);
+      console.log(request.data.results)
       setMovies(request.data.results);
       return request;
     };
@@ -44,7 +45,7 @@ const Row = ({ title, url, isLargeRow }) => {
     <div className="row">
       <h2>{title}</h2>
       <div className="movie_list">
-        {movies.map((movie) => (
+        {movies?.map((movie) => (
           <img
             onClick={() => handleClick(movie)}
             className={`movie ${isLargeRow && "poster"}`}
